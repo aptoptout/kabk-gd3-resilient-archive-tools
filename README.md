@@ -126,9 +126,9 @@ The archive and atlas ‘Vacant NL’ calls upon the Dutch government to make us
 
 ![https://images.dezwijger.nl/unsafe/1500x999/smart/https%3A%2F%2Fadmin.dezwijger.nl%2Fwp-content%2Fuploads%2F2015%2F12%2FRAAAF-Rietveld-Architecture-Art-Affordances-Vacant-NL-000477image.jpg](https://images.dezwijger.nl/unsafe/1500x999/smart/https%3A%2F%2Fadmin.dezwijger.nl%2Fwp-content%2Fuploads%2F2015%2F12%2FRAAAF-Rietveld-Architecture-Art-Affordances-Vacant-NL-000477image.jpg)
 
-[https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.raaaf.nl%2Fimages%2FRAAAF-Rietveld-Architecture-Art-Affordances-DutchAtlasofVacancy-000541image.jpg%3Fw%3D2880&f=1&nofb=1](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.raaaf.nl%2Fimages%2FRAAAF-Rietveld-Architecture-Art-Affordances-DutchAtlasofVacancy-000541image.jpg%3Fw%3D2880&f=1&nofb=1)
+![https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.raaaf.nl%2Fimages%2FRAAAF-Rietveld-Architecture-Art-Affordances-DutchAtlasofVacancy-000541image.jpg%3Fw%3D2880&f=1&nofb=1](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.raaaf.nl%2Fimages%2FRAAAF-Rietveld-Architecture-Art-Affordances-DutchAtlasofVacancy-000541image.jpg%3Fw%3D2880&f=1&nofb=1)
 
-[https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.raaaf.nl%2Fimages%2FRAAAF-Rietveld-Architecture-Art-Affordances-DutchAtlasofVacancy-000542image.jpg%3Fw%3D2880&f=1&nofb=1](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.raaaf.nl%2Fimages%2FRAAAF-Rietveld-Architecture-Art-Affordances-DutchAtlasofVacancy-000542image.jpg%3Fw%3D2880&f=1&nofb=1)
+![https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.raaaf.nl%2Fimages%2FRAAAF-Rietveld-Architecture-Art-Affordances-DutchAtlasofVacancy-000542image.jpg%3Fw%3D2880&f=1&nofb=1](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.raaaf.nl%2Fimages%2FRAAAF-Rietveld-Architecture-Art-Affordances-DutchAtlasofVacancy-000542image.jpg%3Fw%3D2880&f=1&nofb=1)
 
 ### Timeline by Thomas Hirschhorn
 
@@ -170,10 +170,12 @@ The Voyager Golden Records are two phonograph records that were included aboard 
 
 ## Program
 
+| Week No. | Amount of weeks | Activity |
+| --- | --- | --- |
 | Week 3 – 7 | (5 weeks) | **INPUT** |
-| Week 8 | (1 week) | Spring Break | 
+| Week 8 | (1 week) | _Spring Break_ | 
 | Week 9 – 16 | (8 weeks) | **SEMESTER ASSIGNMENT DEVELOPMENT** |
-| Week 17 | (1 week) | May Break |
+| Week 17 | (1 week) | _May Break_ |
 | Week 18 – 21 | (4 weeks) | **OUTCOMES: EXECUTION & PRODUCTION** |
-| Week 22 | (1 week) | Individual Feedback |
-| Week 23 | (1 week) | Collectives 3A & 3B |
+| Week 22 | (1 week) | _Individual Feedback_ |
+| Week 23 | (1 week) | _Collectives 3A & 3B_ |
