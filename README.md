@@ -57,9 +57,7 @@ Markdown a mark-up language as is HTML. It's very easy to use and write. In all 
 
 The documentation will also happen in the [README.md](http://readme.md) file so as always ceate a GitHub repo for this project and start writing in the README.md file your research, process and documentation for your tool(s).
 
-Here's a the basic syntax of Markdown: 
-
-[https://www.markdownguide.org/basic-syntax](https://www.markdownguide.org/basic-syntax)
+Here's a the basic syntax of Markdown: [https://www.markdownguide.org/basic-syntax](https://www.markdownguide.org/basic-syntax)
 
 ### Documentation
 
@@ -72,6 +70,8 @@ The documentation of your tool should consist of the following:
 5. The documentation on how to access, install and use your tool
 
 Important to note is that since this all will be writtin in one file is that you have to keep in mind that it can't have multiple pages but should read and flow like a single long document. Think of the structure of this document, how does it fit within your concept, how does it complement the tool and possibly the artifact? How do you create a resilient documentation?
+
+---
 
 ## Deliverables
 
@@ -87,6 +87,8 @@ A digital, screen-based ***Collection of Archival Resilience***, featuring:
 - A repository of 40 transcoding tools (including documentation & instructions)
 
 The outcomes (including both analog transcodings and the digital repository of tools) will be exhibited at the IISG. Students will also present or give a reading of their processes, transcoding tools and research. **NB: Your Markdown document is therefor your primary design format for all outcomes.** 
+
+---
 
 ## Works using various ways of transcoding
 
@@ -164,18 +166,14 @@ The Voyager Golden Records are two phonograph records that were included aboard 
 - Liam Gillick
 - Gerard Richter
 
+---
+
 ## Program
 
-Week 3 – 7           (5 weeks)                            **CODING PORTFOLIOS +** **IMD INPUT** 
-
-Week 8                 Spring Break
-
-Week 9 – 16         (8 weeks)                             **SEMESTER ASSIGNMENT DEVELOPMENT**
-
-Week 17                May Break
-
-Week 18 – 21        (4 weeks)                            **OUTCOMES: EXECUTION & PRODUCTION**
-
-Week 22                Individual Feedback
-
-Week 23                Collectives 3A & 3B
+| Week 3 – 7 | (5 weeks) | **INPUT** |
+| Week 8 | (1 week) | Spring Break | 
+| Week 9 – 16 | (8 weeks) | **SEMESTER ASSIGNMENT DEVELOPMENT** |
+| Week 17 | (1 week) | May Break |
+| Week 18 – 21 | (4 weeks) | **OUTCOMES: EXECUTION & PRODUCTION** |
+| Week 22 | (1 week) | Individual Feedback |
+| Week 23 | (1 week) | Collectives 3A & 3B |
