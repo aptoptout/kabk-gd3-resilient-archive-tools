@@ -1,0 +1,19 @@
+{
+  "name": "kabk-gd3-resilient-archive-tools",
+  "version": "1.0.0",
+  "author": "Martijn de Heer",
+  "description": "Catalogue of resilient archive transcodings build by KABK Graphic Design students.",
+  "repository": "https://github.com/aptoptout/kabk-gd3-resilient-archive-tools.git",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "request": "^2.88.2",
+    "showdown": "^1.9.1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js"
+  }
+}

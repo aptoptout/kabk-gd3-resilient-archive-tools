@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%- title %></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet.css" type="text/css">
+</head>
+<body>
+
+<%- include('header') -%>
+
+<table>
+    <tr>
+        <th>DESIGNERS</th>
+        <th>TITLE</th>
+        <th>IMAGE</th>
+        <th>DESCRIPTION</th>
+        <th>TAGS</th>
+    </tr>
+    <% data.forEach(function(projects, index){ %>
+        <tr onclick="location.href='/transcoding/<%= projects.projectUrlName %>'">
+            <td>
+            <% projects.students.forEach(function(name, index){ %>
+                    <% if((index + 1) < projects.students.length) { %>
+                        <span><%= name %></span>,
+                    <% } else { %>
+                        <span><%= name %></span>
+                    <% } %>
+            <% }); %>
+            </td>
+            <td>
+                <%= projects.projectName %>
+            </td>
+            <td>
+                <%- projects.image %>
+            </td>
+            <td>
+                <%= projects.description %>
+            </td>
+            <td>
+                <% projects.tags.forEach(function(tag, index){ %>
+                    <% if((index + 1) < projects.tags.length) { %>
+                        <span><%= tag %></span>,
+                    <% } else { %>
+                        <span><%= tag %></span>
+                    <% } %>
+                <% }); %>
+            </td>
+        </tr>
+    <% }); %>
+</table>
+
+</body>
+</html>
