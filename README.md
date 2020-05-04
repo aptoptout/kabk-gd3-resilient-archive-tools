@@ -15,6 +15,7 @@ This project is build with NodeJs.
 - [ ] Interactions
 - [ ] Organisation of all content
 - [ ] Text from IISG?
+- [ ] Organize and manage tags
 
 ### Requirements
 Make sure your setup meets the following requirements:
