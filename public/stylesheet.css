@@ -1,3 +1,4 @@
+/* GENERAL */
 body {
     margin: 0;
     padding: 30px;
@@ -5,15 +6,21 @@ body {
     font-size: 14px;
     line-height: 1.25em;
     font-weight: 100;
-    color: rgba(0, 0, 200);
+    color: rgba(0, 0, 200, 1);
 }
 
+/* TOP BAR PART, INCLUDING ABOUT SECTION */
 nav {
-    padding: 0 15px;
+    padding: 0 15px 30px 15px;
+    font-size: 1.25em;
     line-height: 1em;
     text-align: left;
     text-transform: uppercase;
     font-weight: 400;
+}
+
+nav a, nav a:active, nav a:hover {
+    color: rgba(0, 0, 200, 1);
 }
 
 nav span:first-of-type {
@@ -24,24 +31,34 @@ nav span:last-of-type {
     font-weight: 100;
 }
 
-footer {
-    height: 4em;
-    margin: 2em 0 0 0;
-    line-height: 4em;
-    text-align: center;
-    border-top: 1px solid rgb(220, 220, 220);
+nav p {
+    /*font-size: 1.2em;*/
+    line-height: 1.5em;
+    display: none;
+    text-transform: none;
+    font-weight: 100;
 }
 
-#content {
+nav p.showAbout {
     display: block;
-    margin: auto;
-    width: 80%;
 }
 
-img {
-    max-width: 100%;
-    min-width: 100%;
+nav span:nth-of-type(2):hover {
+    cursor: pointer;
 }
+
+nav p:nth-of-type(2) {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 200, 1);
+}
+
+nav span.activeButton {
+    color: white;
+    background-color: rgba(0, 0, 200, 1);
+    padding: 2px;
+}
+
+/* README PAGE CSS */
 
 table {
     width: 100%;
@@ -62,6 +79,12 @@ tr:nth-child(even) {
     background-color: rgba(0, 0, 200, 0.05);
 }
 
+tr:not(#header):hover {
+    background-color: rgba(0, 0, 200, 1);
+    color: white;
+    cursor: pointer;
+}
+
 td:nth-of-type(1) {
     width: 15vw;
 }
@@ -71,9 +94,22 @@ td:nth-of-type(2) {
 }
 
 td:nth-of-type(3) {
-    width: 10vw;
+    width: 20vw;
 }
 
 td:nth-of-type(4) {
-    width: 35vw;
+    width: 30vw;
+}
+
+/* README PAGE CSS */
+
+#content {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+img {
+    max-width: 100%;
+    min-width: 100%;
 }

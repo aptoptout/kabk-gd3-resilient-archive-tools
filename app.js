@@ -2,6 +2,7 @@ let express = require('express');
 let config = require('./config.json');
 let request = require('request');
 let showdown = require('showdown');
+let $ = require('cheerio');
 
 let routeIndex = require('./routes/routeIndex');
 let routeRepositories = require('./routes/routeRepositories');
@@ -18,12 +19,26 @@ let converter = new showdown.Converter();
 
 config.data.forEach(function (project) {
     request(project.url, function (err, resp, html) {
+
         if(html.length > 0) {
-            let rawMD = "" + html + "";
-            let titleMD = rawMD.split("\n")[1];
-            let imageMD = rawMD.split("\n")[0];
-            project.image = converter.makeHtml(imageMD);
-            project.projectName = titleMD.slice(2, titleMD.length);
+            const rawMD = "" + html + "";
+
+            const titleMD = rawMD.split("\n")[1];
+            const titelHTML = converter.makeHtml(titleMD);
+
+            const imageMD = rawMD.split("\n")[0];
+            const imageHTML = converter.makeHtml(imageMD)
+
+            const baseUrlSplit = project.url.split('/');
+            baseUrlSplit.pop();
+
+            const baseUrlClean = baseUrlSplit.join() + '/';
+
+            const oldSourceImg = $('img', imageHTML).attr('src');
+            const newSourceImg = baseUrlClean.replace(/,/g, '/') + oldSourceImg;
+
+            project.image = $('img', imageHTML).attr('src', newSourceImg);
+            project.projectName = $('h1', titelHTML).text();;
         }
     });
 });
