@@ -4,11 +4,32 @@ _IMD & Coding semester 2 assignment by Hannes Bernard and Martijn de Heer_
 ## Development
 This project is build with NodeJs.
 
+### To do
+
+- [x] Basic skeleton code 
+- [ ] General design
+- [ ] Basic structure (code-wise)
+- [ ] About section
+- [ ] Title design
+- [ ] Meta data (OpenGraph)
+- [ ] Interactions
+- [ ] Organisation of all content
+- [ ] Text from IISG?
+
 ### Requirements
 Make sure your setup meets the following requirements:
 
 - yarn
 - node >= 8
+
+#### Dependencies
+
+- nodemon (hot reloading during development)
+- express (backend routing)
+- request (handling http(s) requests)
+- cheerio (core jQuery for parsing HTML)
+- showdown (generating HTML from MarkDown)
+- ejs (templating and mixing JS w/ HTML)
 
 ### `yarn install`
 
