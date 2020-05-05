@@ -47,15 +47,19 @@ nav span:nth-of-type(2):hover {
     cursor: pointer;
 }
 
-nav p:nth-of-type(2) {
+nav p:last-of-type {
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba(0, 0, 200, 1);
+    /*border-bottom: 1px solid rgba(0, 0, 200, 1);*/
 }
 
 nav span.activeButton {
     color: white;
     background-color: rgba(0, 0, 200, 1);
     padding: 2px;
+}
+
+nav strong {
+    font-weight: 400;
 }
 
 /* README PAGE CSS */
