@@ -1,4 +1,4 @@
-# *CATALOG OF ARCHIVAL RESILIENCE*
+# **CATALOG OF ARCHIVAL RESILIENCE**
 _IMD & Coding semester 2 assignment by Hannes Bernard and Martijn de Heer_
 
 In collaboration with the International Institute of Social History (IISH), third year graphic design students of the Royal Academy of Art, The Hague, have developed long-term archival transcodings based on artefacts from the IISH. This process requires both resilient hardware and software, new digital tools and analogue strategies for transcoding media. Students in IMD and Coding will learn about current strategies and methods for archiving digital culture at the IISG. During the assignment, they will select materials from the physical archive of the IISG and also explore the hardware and tools used for transcoding and digitizing various media at the institution. The aim of this collaboration is for students to devise novel processes with existing transcoding systems at the IISG, but also develop new tools and transcoding methods that can be of interest for the IISG in thinking about how they translate between physical and digital materials.
