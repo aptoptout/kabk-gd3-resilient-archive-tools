@@ -6,8 +6,22 @@
     <title><%- name %></title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../stylesheet.css" type="text/css">
+    <script>
+        const changeImgUrl = function() {
+            const _docImages = Array.from(document.querySelectorAll('img'));
+
+            _docImages.forEach(function(_img, index) {
+                _imgUrl = _img.getAttribute('src');
+
+                _imgUrl = _imgUrl.replace('github', 'raw.githubusercontent');
+                _imgUrl = _imgUrl.replace('/blob', '');
+
+                _img.setAttribute('src', _imgUrl);
+            });
+        }
+    </script>
 </head>
-<body>
+<body onload="changeImgUrl()">
 
 <%- include('header') -%>
 

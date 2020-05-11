@@ -21,7 +21,7 @@ This project is build with NodeJs.
 - [ ] Organisation of all content
 - [ ] Text from IISG?
 - [ ] Organize and manage tags
-- [ ] Convert absolute paths: replace `github` with raw.githubusercontent and remove `/blob`
+- [x] Convert absolute paths: replace `github` with raw.githubusercontent and remove `/blob`
 - [ ] Writing text for about section
 
 ### Requirements
