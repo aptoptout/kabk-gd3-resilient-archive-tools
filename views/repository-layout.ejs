@@ -13,8 +13,10 @@
             _docImages.forEach(function(_img, index) {
                 _imgUrl = _img.getAttribute('src');
 
-                _imgUrl = _imgUrl.replace('github', 'raw.githubusercontent');
-                _imgUrl = _imgUrl.replace('/blob', '');
+                if (_imgUrl.includes('github.com')) {
+                    _imgUrl = _imgUrl.replace('github', 'raw.githubusercontent');
+                    _imgUrl = _imgUrl.replace('/blob', '');
+                }
 
                 _img.setAttribute('src', _imgUrl);
             });

@@ -21,24 +21,20 @@ config.data.forEach(function (project) {
     request(project.url, function (err, resp, html) {
 
         if(html.length > 0) {
-            const rawMD = "" + html + "";
+            const rawMarkDown = "" + html + "";
 
-            const titleMD = rawMD.split("\n")[1];
-            const titelHTML = converter.makeHtml(titleMD);
+            const titleMarkDown = rawMarkDown.split("\n")[1];
+            const titleHTML = converter.makeHtml(titleMarkDown);
 
-            const imageMD = rawMD.split("\n")[0];
-            const imageHTML = converter.makeHtml(imageMD)
+            const imageMarkDown = rawMarkDown.split("\n")[0];
+            const imageHTML = converter.makeHtml(imageMarkDown);
+            let imageHTMLSrc = $('img', imageHTML).attr('src');
 
             const baseUrlSplit = project.url.split('/');
             baseUrlSplit.pop();
 
-            const baseUrlClean = baseUrlSplit.join() + '/';
-
-            const oldSourceImg = $('img', imageHTML).attr('src');
-            const newSourceImg = baseUrlClean.replace(/,/g, '/') + oldSourceImg;
-
-            project.image = $('img', imageHTML).attr('src', newSourceImg);
-            project.projectName = $('h1', titelHTML).text();;
+            project.image = $('img', imageHTML);
+            project.projectName = $('h1', titleHTML).text();
         }
     });
 });

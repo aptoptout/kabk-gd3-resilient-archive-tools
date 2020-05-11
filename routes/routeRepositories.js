@@ -1,9 +1,9 @@
-let express = require('express');
-let config = require('../config.json');
-let showdown = require('showdown');
-let request = require('request');
+const express = require('express');
+const config = require('../config.json');
+const showdown = require('showdown');
+const request = require('request');
 
-let router = express.Router();
+const router = express.Router();
 
 // router.use(function timeLog (req, res, next) {
 //     console.log('Time: ', Date.now(), req.url);
@@ -16,7 +16,7 @@ router.get('/:projectName', function(req, res) {
     config.data.forEach(function (project, index) {
         if (project.projectUrlName === req.params.projectName) {
             request(project.url, function (err, resp, html) {
-                let generatedHtml = converter.makeHtml(html);
+                const generatedHtml = converter.makeHtml(html);
                 res.render('repository-layout', {body: generatedHtml, name: project.students});
             });
         }
