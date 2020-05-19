@@ -28,12 +28,16 @@ config.data.forEach(function (project) {
 
             const imageMarkDown = rawMarkDown.split("\n")[0];
             const imageHTML = converter.makeHtml(imageMarkDown);
-            let imageHTMLSrc = $('img', imageHTML).attr('src');
+            let imageHTMLSrc = '' + $('img', imageHTML).attr('src') + '';
 
-            const baseUrlSplit = project.url.split('/');
-            baseUrlSplit.pop();
+            if (imageHTMLSrc.includes('github.com')) {
+                imageHTMLSrc = imageHTMLSrc.replace('github', 'raw.githubusercontent');
+                imageHTMLSrc = imageHTMLSrc.replace('/blob', '');
+            }
 
-            project.image = $('img', imageHTML);
+            const newImage = $('img', imageHTML).attr('src', imageHTMLSrc);
+
+            project.image = newImage;
             project.projectName = $('h1', titleHTML).text();
         }
     });
