@@ -12,17 +12,15 @@ This project is build with NodeJs.
 
 ### To do
 
-- [x] Basic skeleton code 
 - [ ] General design
-- [ ] Basic structure (code-wise)
-- [ ] Title design
-- [ ] Meta data (OpenGraph)
+- [ ] Catalog title design
 - [ ] Interactions
-- [ ] Organisation of all content
-- [ ] Text from IISG?
-- [ ] Organize and manage tags
-- [x] Convert absolute paths: replace `github` with raw.githubusercontent and remove `/blob`
+- [ ] Double checking all content in README's (right structure, image paths, etc.)
 - [ ] Writing text for about section
+- [ ] Meta data (OpenGraph)
+- [x] Basic structure (code-wise)
+- [x] Basic skeleton code 
+- [x] Convert absolute paths: replace `github` with raw.githubusercontent and remove `/blob`
 
 ### Requirements
 Make sure your setup meets the following requirements:
