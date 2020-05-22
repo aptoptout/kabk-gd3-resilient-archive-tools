@@ -21,6 +21,13 @@ This project is build with NodeJs.
 - [x] Basic structure (code-wise)
 - [x] Basic skeleton code 
 - [x] Convert absolute paths: replace `github` with raw.githubusercontent and remove `/blob`
+- [ ] Schetsen typografie in web pagina
+- [ ] Schetsen layout mbt readme paginas
+- [ ] Nieuwe layout van index pagina
+- [ ] Ingekorte lijst tags overeenstemmig tussen alle studenten
+- [ ] Toegevoegde meta data van media type en output type
+- [ ] Toevoegen portfolio website per student
+- [ ] Kleur /kleur tint bepalen
 
 ### Requirements
 Make sure your setup meets the following requirements:
