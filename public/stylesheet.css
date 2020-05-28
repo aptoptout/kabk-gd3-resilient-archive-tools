@@ -1,26 +1,56 @@
+/* VARIABLES */
+:root {
+    --font-stack-sans: 'Roboto', helvetica, sans-serif;
+    --font-stack-pixel: 'Georgia', serif;
+
+    --green: rgba(0, 212, 96, 1);
+
+    --spacing-s: 20px;
+    --spacing-m: calc(var(--spacing-s) * 1.25);
+    --spacing-l: calc(var(--spacing-s) * 2);
+}
+
 /* GENERAL */
 body {
     margin: 0;
     padding: 30px;
     font-family: "Roboto Mono", monospace;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.25em;
     font-weight: 100;
-    color: rgba(0, 0, 200, 1);
+    color: var(--green);
+    overflow-x: auto;
+}
+
+a, a:visited, a:active {
+    color: var(--green);
+}
+
+tr:hover a strong {
+    color: white;
+}
+
+::-moz-selection {
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--green);
+}
+
+::selection {
+    background: rgba(0, 0, 0, 1);
+    color: var(--green);
 }
 
 /* TOP BAR PART, INCLUDING ABOUT SECTION */
 nav {
-    padding: 0 15px 30px 15px;
+    padding: 0 var(--spacing-s) var(--spacing-l) var(--spacing-s);
     font-size: 1.25em;
     line-height: 1em;
     text-align: left;
     text-transform: uppercase;
-    font-weight: 400;
 }
 
 nav a, nav a:active, nav a:hover {
-    color: rgba(0, 0, 200, 1);
+    color: var(--green);
 }
 
 nav span:first-of-type {
@@ -32,7 +62,6 @@ nav span:last-of-type {
 }
 
 nav p {
-    /*font-size: 1.2em;*/
     line-height: 1.5em;
     display: none;
     text-transform: none;
@@ -48,13 +77,13 @@ nav span:nth-of-type(2):hover {
 }
 
 nav p:last-of-type {
-    padding-bottom: 15px;
+    padding-bottom: var(--spacing-s);
     /*border-bottom: 1px solid rgba(0, 0, 200, 1);*/
 }
 
 nav span.activeButton {
     color: white;
-    background-color: rgba(0, 0, 200, 1);
+    background-color: var(--green);
     padding: 2px;
 }
 
@@ -62,7 +91,7 @@ nav strong {
     font-weight: 400;
 }
 
-/* README PAGE CSS */
+/* INDEX PAGE CSS */
 
 table {
     width: 100%;
@@ -70,39 +99,82 @@ table {
 }
 
 tr {
-    height: 4em;
+    display: flex;
 }
 
-td, th {
-    padding: 15px;
-    font-weight: 100;
-    vertical-align: top;
+body > table > tbody > tr {
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    border-bottom: 1px solid var(--green);
+    transition: height 0.1s linear, opacity 0.5s linear;
+    opacity: 1;
 }
 
-tr:nth-child(even) {
-    background-color: rgba(0, 0, 200, 0.05);
+body > table > tbody > tr tbody tr:nth-of-type(2) {
+    max-height: 0;
+    transition: max-height 0.1s linear;
 }
 
-tr:not(#header):hover {
-    background-color: rgba(0, 0, 200, 1);
+body > table > tbody > tr:not(#header):hover {
+    height: auto;
+    background-color: var(--green);
     color: white;
     cursor: pointer;
 }
 
-td:nth-of-type(1) {
-    width: 15vw;
+body > table > tbody > tr:not(#header):hover tbody tr:nth-of-type(2) {
+    max-height: 1.5em;
 }
 
-td:nth-of-type(2) {
-    width: 20vw;
+tr:not(#header):hover a {
+    color: white;
 }
 
-td:nth-of-type(3) {
-    width: 20vw;
+td, th {
+    flex: 1;
+    padding: var(--spacing-s);
 }
 
-td:nth-of-type(4) {
-    width: 30vw;
+.hideContent td {
+    padding: 0 var(--spacing-s) var(--spacing-s) var(--spacing-s);
+}
+
+body > table > tbody > tr > td {
+    padding: 0;
+    font-weight: normal;
+    vertical-align: top;
+    width: 100%;
+}
+
+table table td.hideContent {
+    padding: var(--spacing-s) 0 0 0;
+}
+
+.autoHeight tbody tr:nth-of-type(2) {
+    max-height: 50em !important;
+}
+
+.tag  {
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.tag:hover {
+    text-decoration: underline;
+}
+
+.activeTag {
+    background-color: var(--green);
+    color: white;
+    border-radius: 2px;
+    /*border: 1px solid var(--green);*/
+    padding: 2px 4px;
+}
+
+tr:hover .activeTag {
+    background-color: white;
+    color: var(--green);
 }
 
 /* README PAGE CSS */
@@ -116,4 +188,24 @@ td:nth-of-type(4) {
 img {
     max-width: 100%;
     min-width: 100%;
+    /*max-width: 70%;*/
+    /*max-height: 80vh;*/
+    /*width: auto;*/
+    /*height: auto;*/
+    /*display: block;*/
+    /*margin: 2em auto;*/
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+
+    td, th {
+        flex: 1;
+        min-height: 5em;
+        padding: var(--spacing-s);
+        min-width: 50vw;
+    }
 }

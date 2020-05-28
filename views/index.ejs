@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <title><%- title %></title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../stylesheet.css" type="text/css">
+    <meta name="author" content="Hannes Bernard, Ralph Bruens, Martijn de Heer and Merel Meijer">
+    <meta name="description" content="A catalog of long-term archival transcodings based on artefacts from the International Institute of Social History in Amsterdam. By 3rd year Graphic Design students from KABK, The Hague.">
+
+    <meta property="og:title" content="<%- title %>">
+    <meta property="og:description" content="A catalog of long-term archival transcodings based on artefacts from the International Institute of Social History in Amsterdam. By 3rd year Graphic Design students from KABK, The Hague.">
+    <!--<meta property="og:image" content="">-->
+    <meta property="og:url" content="https://catalog-of-archival-resilience.herokuapp.com">
+    <meta property="og:site_name" content="catalog-of-archival-resilience">
+
+    <meta name="twitter:title" content="<%- title %>">
+    <meta name="twitter:description" content="DESCRIPTION OF PAGE CONTENT">
+    <!--<meta name="twitter:image" content="">-->
+    <meta name="twitter:site" content="@aptoptout">
+    <meta name="twitter:creator" content="@aptoptout">
+
+    <link href="/" rel="start" title="Home">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../stylesheet.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -13,44 +30,133 @@
 
 <table>
     <tr id="header">
-        <th>DESIGNERS</th>
+        <th>DESIGNER</th>
         <th>TITLE</th>
-        <th>IMAGE</th>
-        <th>ARTEFACT</th>
         <th>TAGS</th>
     </tr>
     <% data.forEach(function(projects, index){ %>
-        <tr onclick="location.href='/transcoding/<%= projects.projectUrlName %>'">
+        <tr class="tableRow <%= projects.tags.join(' ') %>">
             <td>
-            <% projects.students.forEach(function(name, index){ %>
-                    <% if((index + 1) < projects.students.length) { %>
-                        <span><%= name %></span>,
-                    <% } else { %>
-                        <span><%= name %></span>
-                    <% } %>
-            <% }); %>
-            </td>
-            <td>
-                <%= projects.projectName %>
-            </td>
-            <td>
-                <%- projects.image %>
-            </td>
-            <td>
-                <%= projects.description %>
-            </td>
-            <td>
-                <% projects.tags.forEach(function(tag, index){ %>
-                    <% if((index + 1) < projects.tags.length) { %>
-                        <span><%= tag %></span>,
-                    <% } else { %>
-                        <span><%= tag %></span>
-                    <% } %>
-                <% }); %>
+                <table>
+                    <tr>
+                        <td>
+                            <% projects.students.forEach(function(name, index){ %>
+                                <% if((index + 1) < projects.students.length) { %>
+                                    <span><%= name %></span>,
+                                <% } else { %>
+                                    <span><%= name %></span>
+                                <% } %>
+                            <% }); %>
+                        </td>
+                        <td>
+                            <a href="/transcoding/<%= projects.projectUrlName %>">
+                                <%= projects.projectName %>
+                            </a>
+                        </td>
+                        <td>
+                            <% projects.tags.forEach(function(tag, index){ %>
+                                <% if((index + 1) < projects.tags.length) { %>
+                                    <span class="tag" onclick="filterTag('<%= tag %>', event)"><%= tag %></span>,
+                                <% } else { %>
+                                    <span class="tag" onclick="filterTag('<%= tag %>', event)"><%= tag %></span>
+                                <% } %>
+                            <% }); %>
+                        </td>
+                    </tr>
+                    <tr class="hideContent">
+                        <td>
+                            <%- projects.image %>
+                        </td>
+                        <td>
+                            <%= projects.description %>
+                            <br><br>
+                            <a  href="/transcoding/<%= projects.projectUrlName %>">
+                                <strong>READ FULL PROJECT</strong>
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
             </td>
         </tr>
     <% }); %>
 </table>
 
+<script>
+    const allLinks = Array.from(document.querySelectorAll('a'));
+    const allRows = Array.from(document.querySelectorAll('.tableRow'));
+
+    const filterTag = function(tag, event) {
+        const allSpans = Array.from(document.querySelectorAll('span'));
+
+        if(event.target.classList.contains('activeTag')) {
+            allRows.forEach(function(row, i) {
+                row.style.display = 'flex';
+                setTimeout(function() {
+                    row.style.opacity = 1;
+                }, i * 10);
+                // row.removeAttribute('style');
+            });
+
+            allSpans.forEach(function(span) {
+                span.classList.remove('activeTag');
+            });
+        } else {
+            allRows.forEach(function(row, i) {
+                row.removeAttribute('style');
+
+                if(!row.classList.contains(tag)) {
+                    row.style.opacity = 0;
+
+                    setTimeout(function() {
+                        row.style.display = 'none';
+                    }, i * 10);
+                }
+            });
+
+            allSpans.forEach(function(span) {
+                span.classList.remove('activeTag');
+            });
+
+            // event.target.opacity = 0;
+            event.target.classList.add('activeTag');
+        }
+
+        event.stopPropagation();
+    }
+
+    const openThisRow = function(row) {
+        const hiddenElements = Array.from(row.querySelectorAll('.hideContent'));
+
+        hiddenElements.forEach(function(element, index) {
+            element.classList.toggle('hidden');
+        });
+    }
+
+    allLinks.forEach(function(link) {
+        link.addEventListener("click", function(e) {
+            e.stopPropagation();
+        });
+    });
+
+    allRows.forEach(function(row, i) {
+        row.addEventListener("click", function(e) {
+            // openThisRow(row);
+            // if(!e.target.classList.contains('tag')) {
+            row.classList.toggle('autoHeight');
+            // }
+        });
+        // row.addEventListener("mouseenter", function() {
+        //     setTimeout(function() {
+        //         row.style.height = '8em';
+        //     }, 100);
+        // });
+        // row.addEventListener("mouseleave", function() {
+        //     setTimeout(function() {
+        //         row.removeAttribute('style');
+        //     }, 100);
+        // });
+    });
+</script>
 </body>
 </html>

@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title><%- name %></title>
+
+    <title><%- projectTitle %></title>
+    <meta name="author" content="<%- name %>">
+    <meta name="description" content="<%- descriptionText %>">
+
+    <meta property="og:title" content="<%- `${projectTitle} – archival transcoding` %>">
+    <meta property="og:description" content="<%- descriptionText %>">
+    <meta property="og:image" content="<%- cover %>">
+    <meta property="og:url" content="<%- `https://catalog-of-archival-resilience.herokuapp.com/transcoding/${userName}` %>">
+    <meta property="og:site_name" content="catalog-of-archival-resilience">
+
+    <meta name="twitter:title" content="<%- projectTitle %>">
+    <meta name="twitter:description" content="<%- descriptionText %>">
+    <meta name="twitter:image" content="<%- cover %>">
+    <meta name="twitter:site" content="@aptoptout">
+    <meta name="twitter:creator" content="@aptoptout">
+
+    <link href="/" rel="start" title="Home">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../stylesheet.css" type="text/css">
 </head>

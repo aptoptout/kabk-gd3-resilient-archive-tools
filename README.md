@@ -13,21 +13,22 @@ This project is build with NodeJs.
 ### To do
 
 - [ ] General design
-- [ ] Catalog title design
-- [ ] Interactions
-- [ ] Double checking all content in README's (right structure, image paths, etc.)
-- [ ] Writing text for about section
-- [ ] Meta data (OpenGraph)
+- [x] Catalog title design
+- [x] Interactions (tags filtering, etc.)
+- [x] Double checking all content in README's (right structure, image paths, etc.)
+- [x] Writing text for about section
+- [x] Meta data (OpenGraph)
+- [ ] OpenGraph image
 - [x] Basic structure (code-wise)
 - [x] Basic skeleton code 
 - [x] Convert absolute paths: replace `github` with raw.githubusercontent and remove `/blob`
-- [ ] Schetsen typografie in web pagina
-- [ ] Schetsen layout mbt readme paginas
-- [ ] Nieuwe layout van index pagina
-- [ ] Ingekorte lijst tags overeenstemmig tussen alle studenten
-- [ ] Toegevoegde meta data van media type en output type
-- [ ] Toevoegen portfolio website per student
-- [ ] Kleur /kleur tint bepalen
+- [x] Schetsen typografie in web pagina
+- [x] Schetsen layout mbt readme paginas
+- [x] Nieuwe layout van index pagina
+- [x] Ingekorte lijst tags overeenstemmig tussen alle studenten
+- [x] Toegevoegde meta data van media type en output type
+- [x] Toevoegen portfolio website per student
+- [x] Kleur /kleur tint bepalen
 
 ### Requirements
 Make sure your setup meets the following requirements:

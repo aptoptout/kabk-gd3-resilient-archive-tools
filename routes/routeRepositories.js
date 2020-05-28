@@ -17,19 +17,23 @@ router.get('/:projectName', function(req, res) {
 
                 let generatedHtml = converter.makeHtml(html);
                 let $ = cheerio.load(generatedHtml);
+                let coverImgSrc;
 
-                $('img').each(function(){
-
+                $('img').each(function(index){
                     if ($(this).attr('src').includes('github.com')) {
                         newSrc = $(this).attr('src').replace('github', 'raw.githubusercontent');
                         newSrc = newSrc.replace('/blob', '');
 
                         $(this).attr('src', newSrc);
+
+                        if(index === 0) {
+                            coverImgSrc = newSrc;
+                        }
                     }
 
                 });
 
-                res.render('repository-layout', {body: $.html(), name: project.students});
+                res.render('repository-layout', {body: $.html(), name: project.students, projectTitle: project.projectName, cover: coverImgSrc, descriptionText: project.description, userName: project.projectUrlName});
             });
         }
     });
