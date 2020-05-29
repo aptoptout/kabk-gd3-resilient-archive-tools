@@ -65,6 +65,14 @@
     "description": "A pirate radio how-to guide published by Hooligan Press in London in April, 1987. The title comes from a quote from Chantal Paternostre, a Belgian anarchist who said it when arrested on trumped up terrorism charges. She worked for Radio Air Libre, a Brussels pirate radio station.",
     "tags": ["#Activism/Resistance", "#Book/Print", "#Website"]
   }, {
+    "students": ["Daniela Damaschin"],
+    "projectName": "",
+    "projectUrlName": "Daniela510",
+    "url": "https://raw.githubusercontent.com/Daniela510/Ciocarlia/master/README.md",
+    "image" : "",
+    "description": "A vinyl record, onto which is pressed a violin performance of 'Ciocarlia' by Nicu Stanescu.",
+    "tags": ["#CulturalHeritage", "#Audio", "#Website"]
+  }, {
     "students": ["Dominik Dezman"],
     "projectName": "",
     "projectUrlName": "dmnkvd",
@@ -289,14 +297,6 @@
     "image" : "",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum, purus eget eleifend tempor, justo ipsum vulputate mi, ac mollis metus elit id odio. Donec pretium posuere ante ac congue. Nulla eu mi ac enim tempor eleifend eget nec urna. Donec gravida leo ac sem posuere consectetur.",
     "tags": ["#hollywoodfaut", "#publicart", "#redroad", "#sanandreas"]
-  }, {
-    "students": ["Daniela Damaschin"],
-    "projectName": "",
-    "projectUrlName": "Daniela510",
-    "url": "https://raw.githubusercontent.com/Daniela510/Ciocarlia/master/README.md",
-    "image" : "",
-    "description": "A vinyl record, onto which is pressed a violin performance of 'Ciocarlia' by Nicu Stanescu.",
-    "tags": ["#CulturalHeritage", "#Audio", "#Website"]
   }, {
     "students": ["Matteo Pellegrini"],
     "projectName": "",
