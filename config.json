@@ -137,14 +137,6 @@
     "description": "A VHS contained a documentary film titled '총을 들지 않는 사람들' which is made in 2003. The author is Kim Hwantae. The documentary's language is Korean.",
     "tags": ["#War/Revolution", "#Object", "#VideoGame"]
   }, {
-    "students": ["Agata Markowska"],
-    "projectName": "",
-    "projectUrlName": "AMarkowska",
-    "url": "https://raw.githubusercontent.com/AMarkowska/PROPAGANDA/master/README.md",
-    "image" : "",
-    "description": "A book called 'Mother and Child Care in the USSR' by O.P. Nogina",
-    "tags": ["#Identity", "#Book/Print", "#Website"]
-  }, {
     "students": ["Merel Meijer"],
     "projectName": "",
     "projectUrlName": "merellois",
@@ -297,6 +289,14 @@
     "image" : "",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum, purus eget eleifend tempor, justo ipsum vulputate mi, ac mollis metus elit id odio. Donec pretium posuere ante ac congue. Nulla eu mi ac enim tempor eleifend eget nec urna. Donec gravida leo ac sem posuere consectetur.",
     "tags": ["#hollywoodfaut", "#publicart", "#redroad", "#sanandreas"]
+  }, {
+    "students": ["Agata Markowska"],
+    "projectName": "",
+    "projectUrlName": "AMarkowska",
+    "url": "https://raw.githubusercontent.com/AMarkowska/PROPAGANDA/master/README.md",
+    "image" : "",
+    "description": "A book called 'Mother and Child Care in the USSR' by O.P. Nogina",
+    "tags": ["#Identity", "#Book/Print", "#Website"]
   }, {
     "students": ["Matteo Pellegrini"],
     "projectName": "",

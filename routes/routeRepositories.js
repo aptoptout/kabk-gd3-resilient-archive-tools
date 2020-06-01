@@ -19,21 +19,39 @@ router.get('/:projectName', function(req, res) {
                 let $ = cheerio.load(generatedHtml);
                 let coverImgSrc;
 
-                $('img').each(function(index){
+                $('h1').each(function(index) {
+                    if(index > 0) {
+                        const idAttribute = $(this).attr('id');
+                        $(this).replaceWith(`<h2 id="${idAttribute}">` + $(this).html() +'</h2>')
+                    }
+                });
+
+                $('img').each(function(index) {
                     if ($(this).attr('src').includes('github.com')) {
                         newSrc = $(this).attr('src').replace('github', 'raw.githubusercontent');
                         newSrc = newSrc.replace('/blob', '');
 
                         $(this).attr('src', newSrc);
 
-                        if(index === 0) {
-                            coverImgSrc = newSrc;
-                        }
+                        // console.log(index, newSrc);
+                        //
+                        // if(index < 1) {
+                        //     coverImgSrc = newSrc;
+                        //     $(this).css('display', 'none');
+                        // }
                     }
-
                 });
 
-                res.render('repository-layout', {body: $.html(), name: project.students, projectTitle: project.projectName, cover: coverImgSrc, descriptionText: project.description, userName: project.projectUrlName});
+                coverImgSrc = $('p:first-of-type img').attr('src');
+                $('p:first-of-type img').css('display', 'none');
+
+                const tocHeading = $('h3#tableofcontents').html();
+                const tocList = $('ol:first-of-type').html();
+
+                $('h3#tableofcontents').css('display', 'none');
+                $('ol:first-of-type').css('display', 'none');
+
+                res.render('repository-layout', {body: $.html(), tocheading: tocHeading, toclist: tocList, name: project.students, projectTitle: project.projectName, cover: coverImgSrc, descriptionText: project.description, userName: project.projectUrlName});
             });
         }
     });

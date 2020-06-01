@@ -12,13 +12,19 @@ This project is build with NodeJs.
 
 ### To do
 
-- [ ] General design
+- [x] General design
+- [x] Final design implementation
+- [x] OpenGraph image
+- [ ] Korte animatie voor Insta
+- [x] Maak titel kleiner na scrollen
+- [x] Maak 2 kolommen met TOC links en content rechts
+- [x] Maak h2 titels wel met id attributen er aan gekoppeld!!!
+- [x] Maak mobiele versie
 - [x] Catalog title design
 - [x] Interactions (tags filtering, etc.)
 - [x] Double checking all content in README's (right structure, image paths, etc.)
 - [x] Writing text for about section
 - [x] Meta data (OpenGraph)
-- [ ] OpenGraph image
 - [x] Basic structure (code-wise)
 - [x] Basic skeleton code 
 - [x] Convert absolute paths: replace `github` with raw.githubusercontent and remove `/blob`

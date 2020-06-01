@@ -11,13 +11,13 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="<%- title %>">
     <meta property="og:description" content="A catalog of long-term archival transcodings based on artefacts from the International Institute of Social History in Amsterdam. By 3rd year Graphic Design students from KABK, The Hague.">
-    <!--<meta property="og:image" content="">-->
+    <meta property="og:image" content="./media/opengraph_img.jpg">
     <meta property="og:url" content="https://catalog-of-archival-resilience.herokuapp.com">
     <meta property="og:site_name" content="catalog-of-archival-resilience">
 
     <meta name="twitter:title" content="<%- title %>">
     <meta name="twitter:description" content="DESCRIPTION OF PAGE CONTENT">
-    <!--<meta name="twitter:image" content="">-->
+    <meta name="twitter:image" content="./media/opengraph_img.jpg">
     <meta name="twitter:site" content="@aptoptout">
     <meta name="twitter:creator" content="@aptoptout">
 
@@ -28,6 +28,26 @@
 <body>
 
 <%- include('header') -%>
+
+<div class="fakeNav">
+    <h1>
+        CATALOG OF <span>ARCHIVAL</span> RESILIENCE
+    </h1>
+</div>
+
+<div class="about">
+    <p class="introduction">
+        This catalog is the result of a semester-long collaboration between the 3rd year of the bachelor Graphic Design at the <strong>Royal Academy of Art – The Hague</strong> and the <a href="https://iisg.amsterdam/nl"><strong>International Institute of Social History</strong></a> (IISH).</p>
+    <p>
+        Students researched  long-term archival transcodings based on artefacts from the International Institute of Social History. This process requires both resilient hardware and software, new digital tools and analogue strategies for transcoding media. Students in IMD and Coding will learn about current strategies and methods for archiving digital culture at the IISG. During the assignment, they will select materials from the physical archive of the IISG and also explore the hardware and tools used for transcoding and digitizing various media at the institution. The aim of this collaboration is for students to devise novel processes with existing transcoding systems at the IISG, but also develop new tools and transcoding methods that can be of interest for the IISG in thinking about how they translate between physical and digital materials.
+    </p>
+    <p>
+        The catalog has been generated from the README.md files that students included in their Git repositories. These MarkDown files have been used by the students to organize their research, experiments and prototypes and in which they could reflect on these things in a structured way.
+    </p>
+    <p class="introduction">
+        Guided by <strong><a href="http://www.sulsolsal.com" target="_blank">Hannes Bernard</a></strong> (Interactive Media) and <strong><a href="http://www.aptoptout.studio" target="_blank">Martijn de Heer</a></strong> (Coding). Designed by <strong><a href="http://ralphbruens.com" target="_blank">Ralph Bruens</a></strong> and <strong><a href="http://merelmeijer.com" target="_blank">Merel Meijer</a></strong>.
+    </p>
+</div>
 
 <table>
     <tr id="header">
@@ -157,6 +177,17 @@
         //         row.removeAttribute('style');
         //     }, 100);
         // });
+    });
+
+    document.addEventListener('scroll', function() {
+        // console.log(document.documentElement.scrollTop);
+        if(document.documentElement.scrollTop > 0) {
+            document.querySelector('nav h1').classList.add('smallHheading');
+            document.querySelector('div.fakeNav h1').classList.add('smallHheading');
+        } else {
+            document.querySelector('nav h1').classList.remove('smallHheading');
+            document.querySelector('div.fakeNav h1').classList.remove('smallHheading');
+        }
     });
 </script>
 </body>

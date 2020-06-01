@@ -30,9 +30,31 @@
 
 <%- include('header') -%>
 
+<div id="cover">
+    <img src="<%- cover%>">
+</div>
+
+<div id="tableOfContentsLeft">
+    <h3><%- tocheading %></h3>
+    <ol>
+        <%- toclist %>
+    </ol>
+</div>
+
 <div id="content">
     <%- body %>
 </div>
+
+<script>
+    document.addEventListener('scroll', function() {
+        // console.log(document.documentElement.scrollTop);
+        if(document.documentElement.scrollTop > 0) {
+            document.querySelector('nav h1').classList.add('smallHheading');
+        } else {
+            document.querySelector('nav h1').classList.remove('smallHheading');
+        }
+    });
+</script>
 
 </body>
 </html>
