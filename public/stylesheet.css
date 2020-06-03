@@ -1,6 +1,6 @@
 /* VARIABLES */
 :root {
-    /*--green: rgba(27, 255, 132, 1);*/
+    --link: rgba(0, 114, 63, 1);
     --green: rgba(0, 229, 127, 1);
     --spacing-s: 20px;
     --spacing-m: calc(var(--spacing-s) * 1.25);
@@ -278,21 +278,22 @@ tr:hover .activeTag {
     padding: 0 0 0 var(--spacing-s);
 }
 
+#content a {
+    color: var(--link);
+    text-decoration: underline;
+}
+
 #content {
     display: block;
     margin: 0 0 0 33.2%;
     width: 66.7%;
 }
 
-#content a:hover, #content table a:hover {
-    color: black;
-}
-
 #content tr:hover a {
-    color: inherit;
+    color: var(--link);
 }
 
-#content tr a:hover {
+#content a:hover, #content table a:hover, #content tr a:hover {
     color: black;
 }
 
@@ -377,6 +378,18 @@ tr:hover .activeTag {
     padding: 1em 0;
     border-top: 1px solid var(--green);
     border-bottom: 1px solid var(--green);
+}
+
+#content summary:hover {
+    cursor: pointer;
+}
+
+#content hr {
+    border-top: 1px solid var(--green);
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    margin: var(--spacing-l) 0;
 }
 
 /* BREAKPOINTS */
