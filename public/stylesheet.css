@@ -269,7 +269,7 @@ tr:hover .activeTag {
 
     top: 2em;
     float: left;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #tableOfContentsLeft h3 {
@@ -425,7 +425,7 @@ tr:hover .activeTag {
     table {
         width: 100vw;
         display: block;
-        overflow-x: scroll;
+        overflow-x: auto;
     }
 
     #content table {
